@@ -1,6 +1,6 @@
 {
   "name": "gdocs-database",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Use Google Docs to host your website's content",
   "main": "lib/app.js",
   "types": "lib/app.d.ts",
@@ -9,7 +9,9 @@
     "tsc": "tsc",
     "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prepare": "npm run build"
+    "prepare": "npm run build",
+    "version": "git add -A src",
+    "postversion": "git push && git push --tags"
   },
   "keywords": [],
   "author": "Elliot Jenkins",
