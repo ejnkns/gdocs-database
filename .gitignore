@@ -1,0 +1,10 @@
+node_modules/
+settings.json
+.env
+.DS_Store
+yarn.lock
+.history/
+*.txt
+lib/
+.DS_Store
+example/

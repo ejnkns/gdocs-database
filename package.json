@@ -1,0 +1,30 @@
+{
+  "name": "gdocs-database",
+  "version": "0.1.0",
+  "description": "Use Google Docs to host your website's content",
+  "main": "index.js",
+  "scripts": {
+    "start": "tsc && node lib/app.js",
+    "tsc": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Elliot Jenkins",
+  "license": "MIT",
+  "devDependencies": {
+    "tslint": "^5.20.1",
+    "typescript": "^3.9.7"
+  },
+  "dependencies": {
+    "@types/node": "^14.11.2",
+    "typed-rest-client": "^1.7.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ejnkns/gdocs-database.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ejnkns/gdocs-database/issues"
+  },
+  "homepage": "https://github.com/ejnkns/gdocs-database#readme"
+}
