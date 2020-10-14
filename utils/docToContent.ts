@@ -1,6 +1,6 @@
 import { downloadFile } from "./download";
 import { readFileSync, writeFile } from 'fs';
-import { ContentObject, ContentTypes, Link, Para } from "./ContentTypes";
+import { ContentObject, ContentTypes, Link, Para } from "./contentTypes";
 
 // below from React-Player: https://github.com/CookPete/react-player/blob/master/src/patterns.js
 const MATCH_URL_YOUTUBE = /(?:youtu\.be\/|youtube(?:-nocookie)?\.com\/(?:embed\/|v\/|watch\?v=|watch\?.+&v=))((\w|-){11})|youtube\.com\/playlist\?list=|youtube\.com\/user\//;
