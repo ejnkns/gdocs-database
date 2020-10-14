@@ -1,7 +1,3 @@
-export type PageProps = {
-  page: string
-}
-
 export class Page {
   name: string;
   path: string;
@@ -12,9 +8,4 @@ export class Page {
     this.path = path;
     this.docsUrl = docsUrl;
   }
-}
-
-
-export type PlayerProps = {
-    url: string;
 }

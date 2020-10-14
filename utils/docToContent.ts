@@ -16,7 +16,7 @@ const TEMP_FILE_NAME = "temp.txt"
 // downloads a google doc as a text file, then parses the text file into a ContentObject[]
 // google doc has to be formatted correctly: blank lines between content, links in markdown style
 // returns the array of content objects (and writes it to the filePath if specified)
-export async function docsUrlToContentObjectArrayJSON(url: string, filePath: string = TEMP_FILE_NAME): Promise<ContentObject[] | null> {
+export async function docsUrlToContentObjectArray(url: string, filePath: string = TEMP_FILE_NAME): Promise<ContentObject[] | null> {
     await downloadFile(url, filePath).catch(error => console.log(error));
     // TODO: figure out a way to read file without saving it to disk?
     // should i be downloading the txt file to the final filePath and overwriting that file?
