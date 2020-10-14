@@ -2,11 +2,14 @@
   "name": "gdocs-database",
   "version": "0.1.0",
   "description": "Use Google Docs to host your website's content",
-  "main": "index.js",
+  "main": "lib/app.js",
+  "types": "lib/app.d.ts",
   "scripts": {
     "start": "tsc && node lib/app.js",
     "tsc": "tsc",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "npm run build"
   },
   "keywords": [],
   "author": "Elliot Jenkins",
@@ -26,5 +29,8 @@
   "bugs": {
     "url": "https://github.com/ejnkns/gdocs-database/issues"
   },
-  "homepage": "https://github.com/ejnkns/gdocs-database#readme"
+  "homepage": "https://github.com/ejnkns/gdocs-database#readme",
+  "files": [
+    "lib/**/*"
+  ]
 }

@@ -7,7 +7,17 @@
         "sourceMap": true,
         "outDir": "lib",
         "strict": true,
-        "resolveJsonModule": true
+        "resolveJsonModule": true,
+        "declaration": true,
+        "baseUrl": ".",
+        "paths": {
+            "gdocs-databse": [
+                "node_modules/gdocs-databse/src"
+            ],
+            "gdocs-databse/*": [
+                "node_modules/gdocs-databse/src/*"
+            ]
+        }
     },
     "lib": [
         "es2019"
@@ -15,6 +25,8 @@
     "exclude": [
         "node_modules",
         "**/*.spec.ts",
-        "example"
+        "example",
+        "lib",
+        ".history"
     ]
 }
