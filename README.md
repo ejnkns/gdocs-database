@@ -39,7 +39,7 @@ To get a public Google Doc URL:
 - Under 'Get Link' click 'Copy link'
 - Make sure 'Anyone with the link' is set to 'Viewer', as this URL will be public
 
-## Exported Modules
+## Module Exports
 ### Classes and Types
 ##### Class `Page`
 Used to help store information about a page of content.
