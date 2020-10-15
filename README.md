@@ -1,6 +1,6 @@
 # pre-beta-alpha version 0.0.0.0.1 do not expect this to work or make any sense
 # gdocs-database
-Use Google Docs to host your website's (or other app's) content.
+Use Google Docs to host your website's (or app's) content.
 See [this repo](https://github.com/ejnkns/cskeiso-react) for an example using Reactjs and Typescript.
 
 ## Why?
@@ -9,7 +9,7 @@ Have you ever had someone you're making a website for ask you to change one word
 I wanted to have a way for non-developers to change and add content to their website in a way they are already familiar with. With `gdocs-database`, Google Docs can be used to host the parts of the website that clients should have control over, taking away unnecessary responsibility from the developer.
 
 ## How?
-Google Docs are exported as txt files which are then parsed into custom objects. 
+Google Docs are exported as txt files which are then parsed into custom objects that you can use to build your view. 
 
 ## Installation
 ```bash
@@ -67,7 +67,6 @@ The type declaration for the resulting JSON file.
 Useful if you want to write your own function to parse the JSON to something other than a ContentObject array.
 ### Functions
 ##### `docsUrlToContentObjectArray`
-
 ``` typescript
 async function docsUrlToContentObjectArray(url: string, filePath: string = TEMP_FILE_NAME): Promise<ContentObject[] | null>
 ```
