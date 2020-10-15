@@ -1,4 +1,4 @@
-export { Page } from "./utils/propTypes";
+export { Page } from "./utils/contentTypes";
 export { docsUrlToContentObjectArray } from "./utils/docToContent";
 export { ContentObject, ContentTypes, Link, Para } from "./utils/contentTypes";
 export { jsonType } from "./utils/contentTypes";

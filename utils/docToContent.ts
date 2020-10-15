@@ -11,12 +11,16 @@ const MATCH_URL_IMAGE = /\.(gif|jpe?g|tiff?|png|webp|bmp)$/i;
 const MATCH_MARKDOWN_URL = /\[(.*?)\]\((.*?)\)/g; // match[0] = "(text)[url]", match[1] = "text", match[2] = "url", match[4] = "(other text)[other_url]", etc.
 const LINE_BREAK = "(line break)"
 const SPLIT_NEWLINE = /[\r\n][\r\n]/;
-const TEMP_FILE_NAME = "temp.txt"
+const TEMP_FILE_NAME = ".gdocs-database-temp";
+
+const EXPORT_FORMAT = "export?format=txt";
+const GDOC_URL_EDIT = "edit";
 
 // downloads a google doc as a text file, then parses the text file into a ContentObject[]
 // google doc has to be formatted correctly: blank lines between content, links in markdown style
-// returns the array of content objects (and writes it to the filePath if specified)
+// returns an array of ContentObjects (and writes it to the filePath if specified)
 export async function docsUrlToContentObjectArray(url: string, filePath: string = TEMP_FILE_NAME): Promise<ContentObject[] | null> {
+    url = formatUrl(url);
     await downloadFile(url, filePath).catch(error => console.log(error));
     // TODO: figure out a way to read file without saving it to disk?
     // should i be downloading the txt file to the final filePath and overwriting that file?
@@ -101,4 +105,11 @@ export async function docsUrlToContentObjectArray(url: string, filePath: string 
     }
     //TODO: delete temp.txt file if it exists
     return (content); 
+}
+
+function formatUrl(url: string): string {
+    if (url.endsWith(GDOC_URL_EDIT)) {
+        return url.substring(0, url.length - 4) + EXPORT_FORMAT;
+    }
+    return url;
 }
