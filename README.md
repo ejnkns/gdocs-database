@@ -1,7 +1,8 @@
 # pre-beta-alpha version 0.0.0.0.1 do not expect this to work or make any sense
 # gdocs-database
 Use Google Docs to host your website's (or app's) content.
-See [this repo](https://github.com/ejnkns/cskeiso-react) for an example using Reactjs and Typescript.
+See [this short code](https://repl.it/@ElliotJenkins/SilverSingleAdware) for an interactive example in Nodejs.
+See [this repo](https://github.com/ejnkns/cskeiso-react) for an example in Reactjs and Typescript.
 
 ## Why?
 Have you ever had someone you're making a website for ask you to change one word in a paragraph? Add one image to a page? These simple yet very specific tasks are what clients often most care about, and what developers least care about.
