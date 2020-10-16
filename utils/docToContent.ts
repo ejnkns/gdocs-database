@@ -19,7 +19,7 @@ const GDOC_URL_EDIT = "edit";
 // downloads a google doc as a text file, then parses the text file into a ContentObject[]
 // google doc has to be formatted correctly: blank lines between content, links in markdown style
 // returns an array of ContentObjects (and writes it to the filePath if specified)
-export async function docsUrlToContentObjectArray(url: string, filePath: string = TEMP_FILE_NAME): Promise<ContentObject[] | null> {
+export async function docToContent(url: string, filePath: string = TEMP_FILE_NAME): Promise<ContentObject[] | null> {
     url = formatUrl(url);
     await downloadFile(url, filePath).catch(error => console.log(error));
     // TODO: figure out a way to read file without saving it to disk?
