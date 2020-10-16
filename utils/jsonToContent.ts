@@ -1,10 +1,8 @@
-import { ContentObject, Link, Para, ContentTypes} from "./contentTypes";
-import { jsonType } from "./contentTypes";
+import { ContentObject, Link, Para, ContentTypes, jsonType } from "./contentTypes";
 
 export function getContent(json: jsonType): ContentObject[] {
-    let len = json.length;
     let c: ContentObject[] = [];
-    for (let i = 0; i < len; i++) {
+    for (let i = 0; i < json.length; i++) {
         let e = json[i];
         if (e.contentType !== ContentTypes.Para) {
             // no nesting
