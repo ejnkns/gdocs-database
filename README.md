@@ -19,7 +19,7 @@ npm install gdocs-database
 The basic steps are these:
 - Format a Google Doc
 - Get the public URL for the doc
-- Pass the public URL and a path to `docsUrlToContentObjectArray(docsUrl, filePath)`
+- Pass the public URL and a path to `docToContent(docsUrl, filePath)`
 - Read the resulting JSON file with `getContent(jsonFile)`
 - Write your own function to parse the resulting `ContentObject` array into divs for your website (see [here](https://github.com/ejnkns/cskeiso-react/blob/master/client/src/common/OneColumn.tsx) for an example).
 
@@ -66,9 +66,9 @@ Defines the types of content possible
 The type declaration for the resulting JSON file.
 Useful if you want to write your own function to parse the JSON to something other than a ContentObject array.
 ### Functions
-##### `docsUrlToContentObjectArray`
+##### `docToContent`
 ``` typescript
-async function docsUrlToContentObjectArray(url: string, filePath: string = TEMP_FILE_NAME): Promise<ContentObject[] | null>
+async function docToContent(url: string, filePath: string = TEMP_FILE_NAME): Promise<ContentObject[] | null>
 ```
 Downloads a Google Doc as a text file, then parses the text file into a `ContentObject` array.
 Returns a promise of an array of `ContentObject`s and writes it as JSON to the file path if specified.
@@ -76,4 +76,4 @@ Returns a promise of an array of `ContentObject`s and writes it as JSON to the f
 ``` typescript 
 function getContent(json: jsonType): ContentObject[]
 ```
-Parses the JSON file (resulting from a call to `docsUrlToContentObjectArray`) to a `ContentObject` array. You can then write your own function to iterate through the `ContentObject`s and build your view.
+Parses the JSON file (resulting from a call to `docToContent`) to a `ContentObject` array. You can then write your own function to iterate through the `ContentObject`s and build your view.
