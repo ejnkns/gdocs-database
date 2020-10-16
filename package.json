@@ -1,6 +1,6 @@
 {
   "name": "gdocs-database",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Use Google Docs to host your website's content",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
